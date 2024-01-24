@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Assignment</title>
+</head>
+<body>
+    <div>
+        <select>
+            <option value="speedgrader" selected>SpeedGrader</option>
+        </select>
+        <hr>
+        <h2>Assignment Name</h2>
+        <form id="edit-assignment">
+            <input type="text" placeholder="Assignment Name" value="A1 - ENV + HTML">
+            <br><br>
+            <textarea name="assignmentDesc" id="desc-assignment" cols="30" rows="5">This is the Assignment Description
+            </textarea>
+            <br><br>
+            <label for="points">Points <br>
+                <input type="number" name="points" id="pts" value="100" placeholder="Eg. 90, 80, etc">
+            </label>
+            <br><br>
+            <label for="as-groups">Assignment Group <br>
+                <select name="assignment-groups" id="as-groups">
+                    <option value="assignments" selected>ASSIGNMENTS</option>
+                    <option value="quizzes" >QUIZZES</option>
+                    <option value="exams" >EXAMS</option>
+                    <option value="projects" >PROJECTS</option>
+                </select>
+            </label>
+            <br><br>
+            <label for="grade-type">Display Grade as <br>
+                <select name="grades-display" id="grade-disp">
+                    <option value="percentage" selected>Percentage</option>
+                    <option value="points" >Points</option>
+                </select>
+            </label>
+            <br><br>
+            <label for="sub-type">Submission Type<br>
+                <select name="submissiontype" id="sub-type">
+                    <option value="online" selected>Online</option>
+                    <option value="inperson" >In-Person</option>
+                </select>
+            </label>
+
+            <br><br>
+            <label>Online Entry Options</label>
+            <br>
+            <input type="checkbox" name="txt-entry" id="txtentry">
+            <label for="txtentry">Text Entry</label>
+            <br>
+            <input type="checkbox" name="web-url" id="weburl">
+            <label for="weburl">Website URL</label>
+            <br>
+            <input type="checkbox" name="med-record" id="medrec">
+            <label for="medrec">Media Recordings</label>
+            <br>
+            <input type="checkbox" name="stud-annot" id="stuanno">
+            <label for="stuanno">Student Annotation</label>
+            <br>
+            <input type="checkbox" name="file-upload" id="fupload">
+            <label for="fupload">File Uploads</label>
+
+            <br><br>
+            <label>Assign</label>
+            <br>
+            <label for="assign-to">Assign to</label>
+            <br>
+            <input type="text" value="Everyone" id="assign-to">
+
+            <br><br>
+            <label for="due-date">Due</label>
+            <br>
+            <input type="date" name="due" id="due-date" min="2024-01-22">
+
+            <br><br>
+            <label for="avail-date">Available From</label>
+            <br>
+            <input type="date" name="available" id="avail-date" min="2024-01-15">
+
+            <br><br>
+            <label for="until-date">Until</label>
+            <br>
+            <input type="date" name="until" id="until-date" min="2024-01-22">
+            <br><br>
+            <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button">Cancel</button></a>
+            <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button">Submit</button></a>
+        </form>
+    </div>
+</body>
+</html>
