@@ -13,66 +13,55 @@
     <div class="d-flex">
       <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Kanbas</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <!--Left Side Collapsible Menu-->
       
-        <ul>
+        <ul class="wd-kanbas-navigation-collapse">
           <li>
-            <h1 class="wd-logo"><a href="http://northeastern.edu">N</a></h1>
+            <a href="http://northeastern.edu">Kanbas</a>
           </li>
           <li>
             <a href="/Kanbas/Account/Profile/screen.html">
-              <i class="fa fa-solid fa-user fa-xl" style="color: #ffffff"></i>
-              Account</a
-            >
+              <i class="fa fa-solid fa-user fa-xl" ></i> Account</a>
           </li>
           <li class="wd-active">
             <a href="/Kanbas/Dashboard/index.html">
-              <i class="fa fa-tachometer"></i>
-              Dashboard</a
+              <i class="fa fa-tachometer"></i> Dashboard</a
             >
           </li>
           <li>
             <a href="/Kanbas/Courses/Home/screen.html">
-              <i class="fa fa-thin fa-book" style="color: #ff0000"></i>
-              Courses</a
+              <i class="fa fa-thin fa-book" style="color: #ff0000"></i> Courses</a
             >
           </li>
           <li>
-            <a href="#"> <i class="fa fa-calendar"></i>Calendar</a>
+            <a href="#"> <i class="fa fa-calendar"></i> Calendar</a>
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-inbox" style="color: #ff0000"></i>
-              <br />
-              Inbox</a
-            >
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-clock-o" style="color: #ff0000"></i>
-              History</a
+              <i class="fa fa-inbox" style="color: #ff0000"></i> Inbox</a
             >
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-youtube-play" style="color: #ff0000"></i>Studio</a
+              <i class="fa fa-clock-o" style="color: #ff0000"></i> History</a
             >
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-hand-o-up" style="color: #ff0000"></i>
-              Commons</a
+              <i class="fa fa-youtube-play" style="color: #ff0000"></i> Studio</a
             >
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-question-circle" style="color: #ff0000"></i>
-              <br />
-              Help</a
+              <i class="fa fa-hand-o-up" style="color: #ff0000"></i> Commons</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-question-circle" style="color: #ff0000"></i> Help</a
             >
           </li>
         </ul>
@@ -81,39 +70,40 @@
       
       <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height:70%">
         <div class="offcanvas-header">
-          <h5 id="offcanvasTopLabel">Offcanvas top</h5>
+          <h5 id="offcanvasTopLabel">Course Navigation</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
         <div class="offcanvas-body">
         <!--Top Side Collapsible Menu-->
-        <ul class="wd-course-navigation">
+        <ul class="wd-course-navigation-collapse">
           <li>
-            <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+            <a href="/Kanbas/Courses/Home/screen.html"><i class="fa fa-home"></i> Home</a>
           </li>
-          <li class="wd-active">
-            <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+          <li>
+            <a href="/Kanbas/Courses/Modules/screen.html"> <i class="fa fa-envelope"></i>
+              Modules</a>
           </li>
-          <li><a href="#">Piazza</a></li>
-          <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+          <li><a href="#"><i class="fa fa-comment"></i> Piazza</a></li>
+          <li><a href="/Kanbas/Courses/Grades/screen.html"><i class="fa fa-graduation-cap"></i> Grades</a></li>
           <li>
             <a href="/Kanbas/Courses/Assignments/screen.html"
-              >Assignments</a
+              ><i class="fa fa-question"></i> Assignments</a
             >
           </li>
-          <li><a href="#">Quizzes</a></li>
-          <li><a href="#">People</a></li>
-          <li><a href="#">Panopto Video</a></li>
-          <li><a href="#">Discussions</a></li>
-          <li><a href="#">Announcements</a></li>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">Files</a></li>
-          <li><a href="#">Rubrics</a></li>
-          <li><a href="#">Outcomes</a></li>
-          <li><a href="#">Collaborations</a></li>
-          <li><a href="#">Syllabus</a></li>
+          <li><a href="#"> <i class="fa fa-question"></i> Quizzes</a></li>
+          <li><a href="#"><i class="fa fa-users"></i> People</a></li>
+          <li><a href="#"> <i class="fa fa-video"></i> Panopto Video</a></li>
+          <li><a href="#"><i class="fa fa-users"></i> Discussions</a></li>
+          <li><a href="#"><i class="fa fa-envelope"></i> Announcements</a></li>
+          <li><a href="#"><i class="fa fa-file-image-o"></i> Pages</a></li>
+          <li><a href="#"><i class="fa fa-question"></i> Files</a></li>
+          <li><a href="#"><i class="fa fa-question"></i> Rubrics</a></li>
+          <li><a href="#"><i class="fa fa-question"></i> Outcomes</a></li>
+          <li><a href="#"> <i class="fa fa-users"></i> Collaborations</a></li>
+          <li><a href="#"><i class="fa fa-question"></i> Syllabus</a></li>
           <li>
             <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html"
-              >Settings</a
+              ><i class="fa fa-gear"></i> Settings</a
             >
           </li>
         </ul>

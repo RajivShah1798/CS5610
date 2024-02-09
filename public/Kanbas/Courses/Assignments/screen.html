@@ -10,9 +10,108 @@
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css">
     <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div class="d-flex p-2" >
+    <div class="d-flex" >
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <!--Left Side Collapsible Menu-->
+          
+            <ul class="wd-kanbas-navigation-collapse">
+              <li>
+                <a href="http://northeastern.edu">Kanbas</a>
+              </li>
+              <li>
+                <a href="/Kanbas/Account/Profile/screen.html">
+                  <i class="fa fa-solid fa-user fa-xl" ></i> Account</a>
+              </li>
+              <li class="wd-active">
+                <a href="/Kanbas/Dashboard/index.html">
+                  <i class="fa fa-tachometer"></i> Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="/Kanbas/Courses/Home/screen.html">
+                  <i class="fa fa-thin fa-book" style="color: #ff0000"></i> Courses</a
+                >
+              </li>
+              <li>
+                <a href="#"> <i class="fa fa-calendar"></i> Calendar</a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-inbox" style="color: #ff0000"></i> Inbox</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-clock-o" style="color: #ff0000"></i> History</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-youtube-play" style="color: #ff0000"></i> Studio</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-hand-o-up" style="color: #ff0000"></i> Commons</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-question-circle" style="color: #ff0000"></i> Help</a
+                >
+              </li>
+            </ul>
+            </div>
+          </div>
+          
+          <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height:70%">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasTopLabel">Course Navigation</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+            <div class="offcanvas-body">
+            <!--Top Side Collapsible Menu-->
+            <ul class="wd-course-navigation-collapse">
+              <li>
+                <a href="/Kanbas/Courses/Home/screen.html"><i class="fa fa-home"></i> Home</a>
+              </li>
+              <li>
+                <a href="/Kanbas/Courses/Modules/screen.html"> <i class="fa fa-envelope"></i>
+                  Modules</a>
+              </li>
+              <li><a href="#"><i class="fa fa-comment"></i> Piazza</a></li>
+              <li><a href="/Kanbas/Courses/Grades/screen.html"><i class="fa fa-graduation-cap"></i> Grades</a></li>
+              <li>
+                <a href="/Kanbas/Courses/Assignments/screen.html"
+                  ><i class="fa fa-question"></i> Assignments</a
+                >
+              </li>
+              <li><a href="#"> <i class="fa fa-question"></i> Quizzes</a></li>
+              <li><a href="#"><i class="fa fa-users"></i> People</a></li>
+              <li><a href="#"> <i class="fa fa-video"></i> Panopto Video</a></li>
+              <li><a href="#"><i class="fa fa-users"></i> Discussions</a></li>
+              <li><a href="#"><i class="fa fa-envelope"></i> Announcements</a></li>
+              <li><a href="#"><i class="fa fa-file-image-o"></i> Pages</a></li>
+              <li><a href="#"><i class="fa fa-question"></i> Files</a></li>
+              <li><a href="#"><i class="fa fa-question"></i> Rubrics</a></li>
+              <li><a href="#"><i class="fa fa-question"></i> Outcomes</a></li>
+              <li><a href="#"> <i class="fa fa-users"></i> Collaborations</a></li>
+              <li><a href="#"><i class="fa fa-question"></i> Syllabus</a></li>
+              <li>
+                <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html"
+                  ><i class="fa fa-gear"></i> Settings</a
+                >
+              </li>
+            </ul>
+          </div>
+          </div>
         <!--Kanbas Navigation-->
         <div class="d-none d-md-block">
             <ul class="wd-kanbas-navigation">
@@ -59,18 +158,18 @@
 
         <div style="width: -webkit-fill-available;">
             <div class="d-flex d-md-none flex-row p-4 justify-content-between" style="background-color: black;">
-                <button class="wd-top-nav-btn">
+                <button class="wd-top-nav-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                     <i class="fa fa-bars" style="color: white"></i>
-                </button>
+                  </button>
                 <div>
                     <ul class="wd-top-nav-content">
                         <li><a href="#">CS5610.11744.202310</a></li>
                         <li><a href="#">Assignments</a></li>
                     </ul>
                 </div>
-                <button class="wd-top-nav-btn">
+                <button class="wd-top-nav-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
                     <i class="fa fa-chevron-down" style="color: white"></i>
-                </button>
+                  </button>
             </div>
             
             <div class="d-none d-md-flex flex-row p-2 align-items-center">
@@ -199,6 +298,182 @@
                                                 <a style="text-decoration: none;" href="/kanbas/courses/assignments/edit/screen.html"><h5 style="color:black;">A4 React</h5></a>
                                                 <p>Week 3 - REACT - Week starting on Monday September 5th(9/5/2022) Module |</p>
                                                 <p><b>Due</b> Sep 18, 2022 at 11.59pm | 100pts</p>
+                                            </span>
+                                            <span class="ms-auto p-2">
+                                                <i class="fa fa-check-circle text-success"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>    
+                            </li>
+
+                            <li class="list-group-item"> 
+                                <div style="font-size: large;">
+                                    <i class="fa fa-ellipsis-v p-2"></i>Quizzes
+                                    <span class="float-end">
+                                        <span class="badge p-2 rounded-pill bg-light text-dark">20% of Total</span>
+                                        <i class="fa fa-plus ms-2"></i>
+                                        <i class="fa fa-ellipsis-v ms-2"></i>
+                                    </span>
+                                </div>
+                            
+                                <ul class="list-groupwa">
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <span class="p-2">
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-pencil-square-o ms-2 pr-2"></i>
+                                            </span>
+                                            <span class="p-2">
+                                                <a style="text-decoration: none;" href="/kanbas/courses/assignments/edit/screen.html"><h5 style="color:black;">Q1 - HTML</h5></a>
+                                                <p>Week 0 - SETUP - Week starting on Monday September 5th(9/5/2022) Module |</p>
+                                                <p><b>Due</b> Sep 18, 2022 at 11.59pm | 100pts</p>
+                                            </span>
+                                            <span class="ms-auto p-2">
+                                                <i class="fa fa-check-circle text-success"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="d-flex align-items-center">
+                                            <span class="p-2">
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-pencil-square-o ms-2 pr-2"></i>
+                                            </span>
+                                            <span class="p-2">
+                                                <a style="text-decoration: none;" href="/kanbas/courses/assignments/edit/screen.html"><h5 style="color:black;">Q2 - CSS</h5></a>
+                                                <p>Week 1 - HTML - Week starting on Monday September 5th(9/5/2022) Module |</p>
+                                                <p><b>Due</b> Sep 18, 2022 at 11.59pm | 100pts</p>
+                                            </span>
+                                            <span class="ms-auto p-2">
+                                                <i class="fa fa-check-circle text-success"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="d-flex align-items-center">
+                                            <span class="p-2">
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-pencil-square-o ms-2 pr-2"></i>
+                                            </span>
+                                            <span class="p-2">
+                                                <a style="text-decoration: none;" href="/kanbas/courses/assignments/edit/screen.html"><h5 style="color:black;">Q3 - JS, ES6</h5></a>
+                                                <p>Week 2 - CSS - Week starting on Monday September 5th(9/5/2022) Module |</p>
+                                                <p><b>Due</b> Sep 18, 2022 at 11.59pm | 100pts</p>
+                                            </span>
+                                            <span class="ms-auto p-2">
+                                                <i class="fa fa-check-circle text-success"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="d-flex align-items-center">
+                                            <span class="p-2">
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-pencil-square-o ms-2 pr-2"></i>
+                                            </span>
+                                            <span class="p-2">
+                                                <a style="text-decoration: none;" href="/kanbas/courses/assignments/edit/screen.html"><h5 style="color:black;">Q4 - NODE</h5></a>
+                                                <p>Week 3 - REACT - Week starting on Monday September 5th(9/5/2022) Module |</p>
+                                                <p><b>Due</b> Sep 18, 2022 at 11.59pm | 100pts</p>
+                                            </span>
+                                            <span class="ms-auto p-2">
+                                                <i class="fa fa-check-circle text-success"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="d-flex align-items-center">
+                                            <span class="p-2">
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-pencil-square-o ms-2 pr-2"></i>
+                                            </span>
+                                            <span class="p-2">
+                                                <a style="text-decoration: none;" href="/kanbas/courses/assignments/edit/screen.html"><h5 style="color:black;">Q5 - MONGO</h5></a>
+                                                <p>Week 3 - REACT - Week starting on Monday September 5th(9/5/2022) Module |</p>
+                                                <p><b>Due</b> Sep 18, 2022 at 11.59pm | 100pts</p>
+                                            </span>
+                                            <span class="ms-auto p-2">
+                                                <i class="fa fa-check-circle text-success"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>    
+                            </li>
+
+                            <li class="list-group-item"> 
+                                <div style="font-size: large;">
+                                    <i class="fa fa-ellipsis-v p-2"></i>Exams
+                                    <span class="float-end">
+                                        <span class="badge p-2 rounded-pill bg-light text-dark">20% of Total</span>
+                                        <i class="fa fa-plus ms-2"></i>
+                                        <i class="fa fa-ellipsis-v ms-2"></i>
+                                    </span>
+                                </div>
+                            
+                                <ul class="list-groupwa">
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <span class="p-2">
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-pencil-square-o ms-2 pr-2"></i>
+                                            </span>
+                                            <span class="p-2">
+                                                <a style="text-decoration: none;" href="/kanbas/courses/assignments/edit/screen.html"><h5 style="color:black;">Mid Term</h5></a>
+                                            </span>
+                                            <span class="ms-auto p-2">
+                                                <i class="fa fa-check-circle text-success"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="d-flex align-items-center">
+                                            <span class="p-2">
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-pencil-square-o ms-2 pr-2"></i>
+                                            </span>
+                                            <span class="p-2">
+                                                <a style="text-decoration: none;" href="/kanbas/courses/assignments/edit/screen.html"><h5 style="color:black;">Final</h5></a>
+                                            </span>
+                                            <span class="ms-auto p-2">
+                                                <i class="fa fa-check-circle text-success"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>    
+                            </li>
+
+
+                            <li class="list-group-item"> 
+                                <div style="font-size: large;">
+                                    <i class="fa fa-ellipsis-v p-2"></i>Project
+                                    <span class="float-end">
+                                        <span class="badge p-2 rounded-pill bg-light text-dark">30% of Total</span>
+                                        <i class="fa fa-plus ms-2"></i>
+                                        <i class="fa fa-ellipsis-v ms-2"></i>
+                                    </span>
+                                </div>
+                            
+                                <ul class="list-groupwa">
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <span class="p-2">
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                                <i class="fa fa-pencil-square-o ms-2 pr-2"></i>
+                                            </span>
+                                            <span class="p-2">
+                                                <a style="text-decoration: none;" href="/kanbas/courses/assignments/edit/screen.html"><h5 style="color:black;">Final Project</h5></a>
                                             </span>
                                             <span class="ms-auto p-2">
                                                 <i class="fa fa-check-circle text-success"></i>
