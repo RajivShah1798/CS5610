@@ -29,7 +29,7 @@ function Home() {
                 </button>
               </div>
             </div>
-            <div className="row p-2 m-2">
+            <div className="row m-2">
               <ul id="wd-course-status">
                 <li className="btn btn-secondary wd-secondary-btn w-100">
                 <FaFileImport className="m-1" />
