@@ -40,7 +40,7 @@ function Assignments() {
               <li className="list-group-item">
                 <FaEllipsisV className="me-2" />
                 <Link
-                   to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>{assignment.title}</Link>
+                   to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{color:"black"}}>{assignment.title}</Link>
                 <span className="float-end">
                   <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>
               </li>))}
