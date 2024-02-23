@@ -92,7 +92,7 @@ function Grades() {
               const user = users.find((user) => user._id === enrollment.user);
               return (
                 <tr>
-                  <td>
+                  <td style={{color:"red"}}>
                     {user?.firstName} {user?.lastName}
                   </td>
                   {as.map((assignment) => {
