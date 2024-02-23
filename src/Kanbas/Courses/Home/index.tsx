@@ -1,4 +1,8 @@
+import { FaBan, FaBell, FaCheckCircle, FaFileImport } from "react-icons/fa";
 import Modules from "../Modules";
+import { GiBullseye } from "react-icons/gi";
+import { MdBarChart } from "react-icons/md";
+import { TfiAnnouncement } from "react-icons/tfi";
 
 
 function Home() {
@@ -13,7 +17,7 @@ function Home() {
                   className="btn btn-secondary wd-secondary-btn w-100"
                   type="button"
                 >
-                  <i className="fa fa-ban"></i> Unpublish
+                  <FaBan size={12}/> Unpublish
                 </button>
               </div>
               <div className="col">
@@ -21,38 +25,38 @@ function Home() {
                   className="btn btn-success w-100"
                   type="button"
                 >
-                  <i className="fa fa-check-circle text-success"></i> Published
+                  <FaCheckCircle /> Published
                 </button>
               </div>
             </div>
             <div className="row p-2 m-2">
               <ul id="wd-course-status">
                 <li className="btn btn-secondary wd-secondary-btn w-100">
-                  <i className="fa fa-file-image-o"></i>
+                <FaFileImport className="m-1" />
                   <a href="#">Import Existing Content</a>
                 </li>
                 <li className="btn btn-secondary wd-secondary-btn w-100">
-                  <i className="fa fa-file-image-o"></i>
+                <FaFileImport className="m-1" />
                   <a href="#">Import From Commons</a>
                 </li>
                 <li className="btn btn-secondary wd-secondary-btn w-100">
-                  <i className="fa fa-bullseye"></i>
+                <GiBullseye className="m-1" />
                   <a href="#">Choose Home Page</a>
                 </li>
                 <li className="btn btn-secondary wd-secondary-btn w-100">
-                  <i className="fa fa-bar-chart"></i>
+                <MdBarChart className="m-1" />
                   <a href="#">View Course Stream</a>
                 </li>
                 <li className="btn btn-secondary wd-secondary-btn w-100">
-                  <i className="fa fa-microphone"></i>
+                <TfiAnnouncement className="m-1" />
                   <a href="#">New Announcement</a>
                 </li>
                 <li className="btn btn-secondary wd-secondary-btn w-100">
-                  <i className="fa fa-bar-chart"></i>
+                <MdBarChart className="m-1" />
                   <a href="#">New Analytics</a>
                 </li>
                 <li className="btn btn-secondary wd-secondary-btn w-100">
-                  <i className="fa fa-bell"></i>
+                <FaBell className="m-1"/>
                   <a href="#">View Course Notifications</a>
                 </li>
               </ul>
