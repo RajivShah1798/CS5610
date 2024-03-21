@@ -1,9 +1,12 @@
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { assignments } from "../../../Database";
+import { useSelector, useDispatch } from "react-redux";
+import { updateAssignment, addAssignment } from "../assignmentsReducer";
+import { KanbasState } from "../../../store";
+
 function AssignmentEditor() {
   const { assignmentId } = useParams();
-  const assignment = assignments.find(
+  const assignment = useSelector((state: KanbasState) =>  state.assignmentsReducer.assignments).find(
     (assignment) => assignment._id === assignmentId);
   const { courseId } = useParams();
   const navigate = useNavigate();

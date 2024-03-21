@@ -1,10 +1,14 @@
 import React from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
+
+import { useSelector, useDispatch } from "react-redux";
+import { addAssignment, deleteAssignment, updateAssignment, selectAssignment } from "./assignmentsReducer";
+import { KanbasState } from "../../store";
 function Assignments() {
   const { courseId } = useParams();
-  const assignmentList = assignments.filter(
+  const assignmentList = useSelector((state: KanbasState) =>
+  state.assignmentsReducer.assignments).filter(
     (assignment) => assignment.course === courseId);
   return (
     <>
@@ -26,6 +30,7 @@ function Assignments() {
     </div>
       <hr />
       <ul className="list-group wd-modules">
+        
         <li className="list-group-item">
           <div>
             <FaEllipsisV className="me-2" /> ASSIGNMENTS
