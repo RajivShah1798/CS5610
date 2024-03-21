@@ -18,21 +18,24 @@ function Dashboard({
   updateCourse: () => void;
 }) {
   const [show, setShow] = useState(false);
-
+  const [addUpdateFlag, setAddUpdateFlag] = useState(true);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
     <div className="p-4">
       <h1>
         Dashboard
-        <button className="btn btn-success float-end" onClick={handleShow}>
+        <button className="btn btn-success float-end" onClick={() =>{
+          setAddUpdateFlag(true);
+          handleShow();
+        }}>
           Add New Course
         </button>
       </h1>
       <hr />
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Add New Course</Modal.Title>
+          <Modal.Title>{ addUpdateFlag === false ? "Update " : "Add New " } Course</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <input
@@ -62,6 +65,7 @@ function Dashboard({
         </Modal.Body>
         <Modal.Footer>
           <button
+          { ...addUpdateFlag === false ? { disabled: true } : {} }
             className="btn btn-success w-25 m-2"
             onClick={() => {
               addNewCourse();
@@ -71,6 +75,7 @@ function Dashboard({
             Add
           </button>
           <button
+          { ...addUpdateFlag ? { disabled: true } : {} }
             className="btn btn-primary float-end w-25 m-2"
             onClick={() => {
               updateCourse();
@@ -117,6 +122,8 @@ function Dashboard({
                         onClick={(event) => {
                           event.preventDefault();
                           setCourse(course);
+                          setAddUpdateFlag(false);
+                          handleShow();
                         }}
                       >
                         Edit

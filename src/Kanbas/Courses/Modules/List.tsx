@@ -45,12 +45,15 @@ function ModuleList() {
           </select>
         </div>
         <div className="col-auto">
-          <button className="btn btn-danger" type="button" onClick={handleShow}>
+          <button className="btn btn-danger" type="button" onClick={() => {
+            handleShow();
+            setAddUpdateFlag(true);
+          }}>
             + Module
           </button>
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Add New Module</Modal.Title>
+              <Modal.Title>{ addUpdateFlag === false ? "Update " : "Add New " } Module</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <input
