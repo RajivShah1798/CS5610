@@ -3,12 +3,13 @@ import Modules from "../Modules";
 import { GiBullseye } from "react-icons/gi";
 import { MdBarChart } from "react-icons/md";
 import { TfiAnnouncement } from "react-icons/tfi";
+import ModuleList from "../Modules/List";
 
 
 function Home() {
   return (
     <div className="d-flex">
-      <Modules />
+      <ModuleList />
       <div className="flex-grow-0 d-none d-lg-block p-2" style={{width: "300px"}}>
             <div className="row p-2">
               <h3>Course Status</h3>

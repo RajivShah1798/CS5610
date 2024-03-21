@@ -67,7 +67,8 @@ function Assignments() {
                 <Link
                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{color:"black"}}>{assignment.title}</Link>
                 <span className="float-end">
-                  <button className="btn btn-danger"
+                  <button className="btn btn-danger p-2 m-2"
+                  style={{borderRadius:"6px"}}
                   onClick={() => {handleShow();
                   dispatch(selectAssignment(assignment))}}>Delete Assignment</button>
                   <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>

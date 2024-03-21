@@ -7,6 +7,7 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
+import ModuleList from "./Modules/List";
 
 const Courses = ({courses} : {courses: any[];}) => {
   const { courseId } = useParams();
@@ -69,7 +70,7 @@ const Courses = ({courses} : {courses: any[];}) => {
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home />} />
-            <Route path="Modules" element={<Modules />} />
+            <Route path="Modules" element={<ModuleList />} />
             <Route path="Piazza" element={<h1>Piazza</h1>} />
             <Route path="Assignments" element={<Assignments />} />
             <Route

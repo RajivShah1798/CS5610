@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { updateAssignment, addAssignment , selectAssignment} from "../assignmentsReducer";
 import { KanbasState } from "../../../store";
+import { current } from "@reduxjs/toolkit";
 
 function AssignmentEditor() {
   const { assignmentId, courseId } = useParams();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
   const currentAssignment = useSelector((state: KanbasState) =>  state.assignmentsReducer.assignments).find(
     (assignment) => assignment._id === assignmentId);
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+    useEffect(() => {
+        if (currentAssignment === undefined) {
+            dispatch(selectAssignment([]));
+        }else {
+            dispatch(selectAssignment(currentAssignment));
+        }
+    },[])
+  
   const handleSave = () => {
     if (currentAssignment === undefined) {
-        dispatch(addAssignment({...assignment, _id:assignmentId, course: courseId}));
+        dispatch(addAssignment({...assignment, _id:"A"+assignmentId, course: courseId}));
     }
     else {
         dispatch(updateAssignment(assignment));
@@ -24,7 +33,7 @@ function AssignmentEditor() {
   return (
     <div>
       <h2>Assignment Name</h2>
-      <input value={currentAssignment?.title}
+      <input value={assignment?.title}
              className="form-control mb-2" 
              onChange={(event) => dispatch(
                 selectAssignment({...assignment, title: event.target.value})
@@ -34,14 +43,14 @@ function AssignmentEditor() {
             <textarea className="form-control" name="bio" cols={20} rows={3}
             onChange={(event) => dispatch(
                 selectAssignment({...assignment, description: event.target.value})
-             )}>{currentAssignment?.description}</textarea><br/>
+             )}>{assignment?.description}</textarea><br/>
             
             <div className="row align-items-top pb-3">
                 <div className="col-3 text-end">
                     <label htmlFor="points">Points</label>
                 </div>
                 <div className="col-9">
-                    <input className="form-control" type="number" value={currentAssignment?.points}
+                    <input className="form-control" type="number" value={assignment?.points}
                     onChange={(event) => dispatch(
                         selectAssignment({...assignment, points: event.target.value})
                      )}/>
@@ -96,20 +105,20 @@ function AssignmentEditor() {
                             </button>
                         </div>
                         <b style={{paddingTop: "4px"}}>Due</b>
-                        <input className="form-control" type="date" value={currentAssignment?.dueDate}                        onChange={(event) => dispatch(
+                        <input className="form-control" type="date" value={assignment?.dueDate}                        onChange={(event) => dispatch(
                             selectAssignment({...assignment, dueDate: event.target.value})
                          )}/>
                         <div className="row">
                             <div className="col-6">
                                 <b style={{paddingTop: "4px"}}>Available from</b>
-                                <input className="form-control" type="date" value={currentAssignment?.availableFromDate}    
+                                <input className="form-control" type="date" value={assignment?.availableFromDate}    
                                 onChange={(event) => dispatch(
                                     selectAssignment({...assignment, availableFromDate: event.target.value})
                                  )}/>
                             </div>
                             <div className="col-6">
                                 <b style={{paddingTop: "4px"}}>Until</b>
-                                <input className="form-control" type="date" value={currentAssignment?.availableUntilDate}    
+                                <input className="form-control" type="date" value={assignment?.availableUntilDate}    
                                 onChange={(event) => dispatch(
                                     selectAssignment({...assignment, availableUntilDate: event.target.value})
                                  )}/>
